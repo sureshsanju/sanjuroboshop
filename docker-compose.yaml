@@ -28,6 +28,26 @@ services:
     depends_on:
     - mongodb
     - redis
+
+  instana-agent:
+    image: instana/agent
+    container_name: instana-agent
+    environment:
+      - INSTANA_AGENT_KEY=your_actual_agent_key_here
+    networks:
+      - instana-network
+
+  instana-collector:
+    image: instana/collector
+    container_name: instana-collector
+    environment:
+      - INSTANA_AGENT_ENDPOINT=instana-agent:42699
+    networks:
+      - instana-network
+
+networks:
+  instana-network:
+    driver: bridge
    
  
     
