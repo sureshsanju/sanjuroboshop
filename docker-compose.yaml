@@ -1,7 +1,4 @@
 version: "3.9"
-networks:
-  robosanju:
-    driver: bridge
 
 services:
   web:
