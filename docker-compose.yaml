@@ -1,6 +1,6 @@
 version: "3.9"
 networks:
-  roboshop:
+  robosanju:
     driver: bridge
 
 services:
