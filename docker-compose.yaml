@@ -35,7 +35,7 @@ services:
       - instana-network
 
   instana-collector:
-    image: instana/collector
+    image: instana/collector:latest
     container_name: instana-collector
     environment:
       - INSTANA_AGENT_ENDPOINT=instana-agent:42699
