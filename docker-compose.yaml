@@ -1,11 +1,17 @@
 version: "3.9"
+networks:
+ roboshop23:
+  driver: bridge
+  port: 4299
+
+
 
 services:
   web:
     image: web:v1
     container_name: web
     ports:
-    - "8070:80"
+    - "80:80"
     depends_on:
     - catalogue
   catalogue:
@@ -26,25 +32,6 @@ services:
     - mongodb
     - redis
 
-  instana-agent:
-    image: instana/agent
-    container_name: instana-agent
-    environment:
-      - INSTANA_AGENT_KEY=your_actual_agent_key_here
-    networks:
-      - instana-network
-
-  instana-collector:
-    image: instana/collector:latest
-    container_name: instana-collector
-    environment:
-      - INSTANA_AGENT_ENDPOINT=instana-agent:42699
-    networks:
-      - instana-network
-
-networks:
-  instana-network:
-    driver: bridge
-   
+  
  
     
