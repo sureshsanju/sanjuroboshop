@@ -5,19 +5,19 @@ networks:
 services:
  web:
   image: web12:v1
-  container_name: web
+  container_name: web12
   ports:
   - "80:80"
   depends_on:
   - catalogue
  catalogue:
   image: catalogue12:v1
-  container_name: catalogue
+  container_name: catalogue12
   depends_on:
   - mongodb
  mongodb:
   image: mongodb12:v1
-  container_name: mongodb
+  container_name: mongodb12
   volumes:
    - ./mongod.conf:/etc/mongod.conf
   ports:
@@ -27,7 +27,7 @@ services:
 
  user:
   image: user12:v1
-  container_name: user
+  container_name: user12
   depends_on:
   - mongodb
   - redis
