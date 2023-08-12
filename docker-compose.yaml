@@ -4,19 +4,19 @@ networks:
   driver: bridge
 services:
  web:
-  image: web:v1
+  image: web12:v1
   container_name: web
   ports:
   - "80:80"
   depends_on:
   - catalogue
  catalogue:
-  image: catalogue:v1
+  image: catalogue12:v1
   container_name: catalogue
   depends_on:
   - mongodb
  mongodb:
-  image: mongodb:v1
+  image: mongodb12:v1
   container_name: mongodb
   volumes:
    - ./mongod.conf:/etc/mongod.conf
@@ -26,13 +26,13 @@ services:
   command: ["mongod", "--config", "/etc/mongod.conf"]
 
  user:
-  image: user:v1
+  image: user12:v1
   container_name: user
   depends_on:
   - mongodb
   - redis
  redis:
-  image: redis
+  image: redis12
   
 
 
