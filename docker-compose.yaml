@@ -32,7 +32,7 @@ services:
   - mongodb
   - redis
  redis:
-  image: redis12
+  image: redis
   
 
 
