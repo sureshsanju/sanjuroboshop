@@ -1,28 +1,28 @@
-version: "3.9"
+version: "3"
 networks:
  docker12kube:
   driver: bridge
 services:
  web:
-  image: web12:v1
-  container_name: web12
+  image: web:v1
+  container_name: web
   ports:
   - "80:80"
   depends_on:
   - catalogue
  catalogue:
-  image: catalogue12:v1
-  container_name: catalogue12
+  image: catalogue:v1
+  container_name: catalogue
   depends_on:
   - mongodb
  mongodb:
-  image: mongodb12:v1
-  container_name: mongodb12
+  image: mongodb:v1
+  container_name: mongodb
   
 
  user:
-  image: user12:v1
-  container_name: user12
+  image: user:v1
+  container_name: user
   depends_on:
   - mongodb
   - redis
