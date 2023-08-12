@@ -1,0 +1,5 @@
+FROM centos:latest
+
+# Install yum and vim
+RUN yum update -y && \
+    yum install -y yum vim
