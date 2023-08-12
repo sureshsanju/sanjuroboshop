@@ -18,12 +18,7 @@ services:
  mongodb:
   image: mongodb12:v1
   container_name: mongodb12
-  volumes:
-   - ./mongod.conf:/etc/mongod.conf
-  ports:
-   - "27017:27017"
-  restart: always
-  command: ["mongod", "--config", "/etc/mongod.conf"]
+  
 
  user:
   image: user12:v1
