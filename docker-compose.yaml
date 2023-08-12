@@ -18,16 +18,16 @@ services:
  mongodb:
   image: mongodb:v1
   container_name: mongodb
-  
 
+ redis:
+  image: redis
  user:
   image: user:v1
   container_name: user
   depends_on:
   - mongodb
   - redis
- redis:
-  image: redis
+ 
   
 
 
