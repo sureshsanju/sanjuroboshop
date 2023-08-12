@@ -3,6 +3,13 @@ networks:
  sureshkube:
   driver: bridge
 services:
+ collector:
+  image: instana/collector:latest
+  environment:
+  - COLLECTOR_HOST=0.0.0.0
+  - COLLECTOR_PORT=42699
+  ports:
+  - "42699:42699"
  web:
   image: web:v1
   container_name: web
@@ -18,6 +25,13 @@ services:
  mongodb:
   image: mongodb:v1
   container_name: mongodb
+  volumes:
+   - ./mongod.conf:/etc/mongod.conf
+  ports:
+   - "27017:27017"
+  restart: always
+  command: ["mongod", "--config", "/etc/mongod.conf"]
+
  user:
   image: user:v1
   container_name: user
