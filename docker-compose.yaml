@@ -3,13 +3,6 @@ networks:
  sureshkube:
   driver: bridge
 services:
- collector:
-  image: instana/collector:latest
-  environment:
-  - COLLECTOR_HOST=0.0.0.0
-  - COLLECTOR_PORT=42699
-  ports:
-  - "42699:42699"
  web:
   image: web:v1
   container_name: web
