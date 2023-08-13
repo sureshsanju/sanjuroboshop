@@ -2,7 +2,6 @@
 # Build
 #
 FROM debian:10 AS build
-RUN rm -rf /var/cache/apt/archives/
 
 
 RUN apt-get update && apt-get -y install maven
