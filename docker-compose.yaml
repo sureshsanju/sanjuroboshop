@@ -1,10 +1,12 @@
-almalinux:
- image: latest
+
 version: "3.9"
 networks:
  docker12kube:
   driver: bridge
 services:
+ almalinux-container:
+  image: almalinux:latest
+  container_name: my-almalinux-container
  web:
   image: web:v1
   container_name: web
