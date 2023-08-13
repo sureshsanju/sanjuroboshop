@@ -1,8 +1,8 @@
 
 version: "3.9"
 networks:
- ravi:
-  driver: bridge
+  roboshopravi:
+    driver: bridge
 services:
  almalinux:
   image: almalinux
