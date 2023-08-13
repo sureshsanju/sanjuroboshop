@@ -5,7 +5,6 @@ FROM almalinux:latest
 RUN dnf install -y nginx
 
 # Expose port 80 for HTTP traffic
-EXPOSE 80
 
 # Start Nginx when the container starts
 CMD ["nginx", "-g", "daemon off;"]
