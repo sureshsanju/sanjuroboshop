@@ -4,6 +4,9 @@ networks:
  docker12kube:
   driver: bridge
 services:
+ almalinux:
+    image: almalinux:latest
+    container_name: almalinux
  
  web:
   image: web:v1
@@ -16,9 +19,7 @@ services:
   - cart
   - mysql
   - shipping
-  almalinux-container:
-   image: almalinux:latest
-   container_name: my-almalinux-container
+  - almalinux
  catalogue:
   image: catalogue:v1
   container_name: catalogue
