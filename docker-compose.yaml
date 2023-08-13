@@ -5,7 +5,7 @@ networks:
   driver: bridge
 services:
  almalinux:
-  image: almalinux:v1
+  image: almalinux
   container_name: almalinux
  
  web:
