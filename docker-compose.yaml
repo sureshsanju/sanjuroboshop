@@ -19,7 +19,7 @@ services:
   - cart
   - mysql
   - shipping
-  - almalinux
+  
   
  catalogue:
   image: catalogue:v1
