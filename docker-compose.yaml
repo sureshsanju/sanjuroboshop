@@ -1,4 +1,5 @@
-
+almalinux:
+ image: latest
 version: "3.9"
 networks:
  docker12kube:
