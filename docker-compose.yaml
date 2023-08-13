@@ -7,7 +7,7 @@ services:
   image: web:v1
   container_name: web
   ports:
-  - "80:80"
+  - "8095:8095"
   depends_on:
   - catalogue
   - user
@@ -51,7 +51,7 @@ services:
   container_name: payment
   depends_on:
   - rabbitmq
-  
+
 
  
   
