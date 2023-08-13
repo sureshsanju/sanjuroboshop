@@ -1,12 +1,5 @@
-# Use the official AlmaLinux base image
-FROM almalinux:latest
 
-# Install Nginx from the AlmaLinux repository
-RUN dnf install -y nginx
-
-# Expose port 80 for HTTP traffic
-
-# Start Nginx when the container starts
+FROM nginx:latest
 RUN chmod 644 /etc/nginx/nginx.conf
 RUN rm -rf /etc/nginx/nginx.conf
 RUN rm -rf /etc/nginx/conf.d/default.conf
