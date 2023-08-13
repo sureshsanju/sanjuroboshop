@@ -1,3 +1,4 @@
+FROM almalinux
 version: "3.9"
 networks:
  docker12kube:
