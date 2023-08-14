@@ -2,7 +2,7 @@
 version: "3.9"
 
 networks:
- roboshop:
+ roboshop1:
   driver: bridge
 services:
  almalinux:
