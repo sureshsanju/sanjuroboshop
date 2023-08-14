@@ -4,11 +4,8 @@ version: "3.9"
 networks:
  roboshop1:
   driver: bridge
+
 services:
- almalinux:
-  image: almalinux
-  container_name: almalinux
- 
  web:
   image: web:v1
   container_name: web
@@ -20,7 +17,6 @@ services:
   - cart
   - mysql
   - shipping
-  
   
  catalogue:
   image: catalogue:v1
