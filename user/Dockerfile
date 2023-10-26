@@ -1,5 +1,5 @@
 FROM node:14
-EXPOSE 9000
+EXPOSE 8080
 
 WORKDIR /opt/server
 
